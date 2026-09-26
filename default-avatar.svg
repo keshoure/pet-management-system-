@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="30" fill="url(#avatarBg)"/>
+  <!-- Paw print -->
+  <ellipse cx="60" cy="74" rx="18" ry="14" fill="#ffffff" opacity="0.9"/>
+  <ellipse cx="38" cy="52" rx="9" ry="12" transform="rotate(-15 38 52)" fill="#ffffff" opacity="0.9"/>
+  <ellipse cx="53" cy="42" rx="9" ry="12" fill="#ffffff" opacity="0.9"/>
+  <ellipse cx="67" cy="42" rx="9" ry="12" fill="#ffffff" opacity="0.9"/>
+  <ellipse cx="82" cy="52" rx="9" ry="12" transform="rotate(15 82 52)" fill="#ffffff" opacity="0.9"/>
+</svg>
