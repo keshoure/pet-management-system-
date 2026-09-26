@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#10b981" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="PawPulse - The Modern Operating System for Pet Health, Vaccination Tracking, Vet Bookings & Daily Care." />
+  <title>PawPulse 🐾 Pet Care & Health Management Platform</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/manifest.json" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/styles/variables.css" />
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/mobile-layout.css" />
+  <link rel="stylesheet" href="/src/styles/components.css" />
+  <link rel="stylesheet" href="/src/styles/dashboard.css" />
+  <link rel="stylesheet" href="/src/styles/pets.css" />
+  <link rel="stylesheet" href="/src/styles/health.css" />
+  <link rel="stylesheet" href="/src/styles/vaccines.css" />
+  <link rel="stylesheet" href="/src/styles/appointments.css" />
+  <link rel="stylesheet" href="/src/styles/reminders.css" />
+  <link rel="stylesheet" href="/src/styles/passport.css" />
+  <link rel="stylesheet" href="/src/styles/print.css" />
+  <link rel="stylesheet" href="/src/styles/website.css" />
+</head>
+<body>
+
+  <!-- =========================================================
+       1. MARKETING WEBSITE ROOT VIEW
+       ========================================================= -->
+  <div id="website-root" class="website-wrapper">
+    
+    <!-- Top Site Navigation -->
+    <nav class="site-navbar">
+      <div class="site-container navbar-inner">
+        <a href="#hero" class="site-logo">
+          <div class="site-logo-icon"><i class="fa-solid fa-paw"></i></div>
+          <span>PawPulse</span>
+        </a>
+
+        <ul class="nav-menu-links">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#calculator" class="nav-link">Health Calculator</a></li>
+          <li><a href="#vets" class="nav-link">Vet Network</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="nav-toggle-mode-btn" id="site-theme-btn" title="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="btn btn-primary btn-sm nav-launch-app-btn" data-view-target="app">
+            <i class="fa-solid fa-mobile-screen"></i> Launch App
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="site-hero-section" id="hero">
+      <div class="site-container hero-grid">
+        <div class="hero-content">
+          <span class="section-badge">
+            <i class="fa-solid fa-bolt"></i> Next-Gen Pet Health OS
+          </span>
+          <h1 class="hero-headline">
+            The Complete Operating System for <span class="text-highlight">Pet Health & Happiness</span>
+          </h1>
+          <p class="hero-subtitle">
+            Manage vaccination schedules, track biometric weight curves, book vet visits, and carry an official digital pet passport anywhere in the world.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary hero-launch-app-btn" data-view-target="app" style="padding: 0.85rem 1.6rem; font-size: 0.95rem;">
+              <i class="fa-solid fa-rocket"></i> Launch Free Web App
+            </button>
+            <div class="store-badges-row">
+              <a href="#" class="store-badge-btn open-store-modal-btn" data-store="google-play">
+                <i class="fa-brands fa-google-play store-badge-icon"></i>
+                <div class="store-badge-texts">
+                  <span class="store-badge-sub">GET IT ON</span>
+                  <span class="store-badge-title">Google Play</span>
+                </div>
+              </a>
+              <a href="#" class="store-badge-btn open-store-modal-btn" data-store="app-store">
+                <i class="fa-brands fa-apple store-badge-icon"></i>
+                <div class="store-badge-texts">
+                  <span class="store-badge-sub">Download on the</span>
+                  <span class="store-badge-title">App Store</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-trust-bar">
+            <div class="hero-trust-avatars">
+              <img src="/images/pets/luna.jpg" alt="Luna" class="hero-trust-avatar" />
+              <img src="/images/pets/milo.jpg" alt="Milo" class="hero-trust-avatar" />
+              <img src="/images/pets/cooper.jpg" alt="Cooper" class="hero-trust-avatar" />
+            </div>
+            <div>
+              <div class="hero-trust-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="hero-trust-text"><strong>4.9 / 5</strong> rating from <strong>50,000+</strong> happy pet parents</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Phone Mockup Preview -->
+        <div class="hero-mockup-wrapper">
+          <!-- Floating Feature Badges -->
+          <div class="floating-badge badge-top-left">
+            <div class="float-icon-box" style="background: rgba(16, 185, 129, 0.15); color: var(--primary-600);">
+              <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600; display: block;">IMMUNIZATION</span>
+              <strong style="font-size: 0.85rem; color: var(--text-primary);">99.8% Protected</strong>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-right">
+            <div class="float-icon-box" style="background: rgba(99, 102, 241, 0.15); color: var(--accent-indigo-500);">
+              <i class="fa-solid fa-id-card"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600; display: block;">DIGITAL PASSPORT</span>
+              <strong style="font-size: 0.85rem; color: var(--text-primary);">Emergency QR Active</strong>
+            </div>
+          </div>
+
+          <!-- Embedded App Frame -->
+          <div class="hero-phone-shell">
+            <iframe src="/app.html" class="hero-phone-screen-embed" title="PawPulse Live Interactive App Preview"></iframe>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Interactive Pet Health & Nutrition Calculator Section -->
+    <section class="section-padding" id="calculator" style="background: var(--bg-surface-elevated);">
+      <div class="site-container">
+        <div class="section-header-center">
+          <span class="section-badge"><i class="fa-solid fa-calculator"></i> Interactive Health Tool</span>
+          <h2>Pet Calorie & Daily Water Calculator</h2>
+          <p>Estimate your pet's precise daily nutritional energy requirement (DER) and recommended water intake based on veterinary formulas.</p>
+        </div>
+
+        <div class="calculator-card">
+          <div class="calc-inputs-col">
+            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3);">
+              <div>
+                <label class="form-label">Pet Species</label>
+                <select class="form-select" id="calc-species">
+                  <option value="dog">Dog (Canine)</option>
+                  <option value="cat">Cat (Feline)</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Pet Age (Years)</label>
+                <input type="number" class="form-input" id="calc-age" value="2" min="0.5" max="20" step="0.5" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Current Weight (kg)</label>
+              <div class="input-icon-wrapper">
+                <i class="fa-solid fa-weight-scale"></i>
+                <input type="number" class="form-input" id="calc-weight" value="28.5" min="1" max="90" step="0.5" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Daily Activity & Life Stage</label>
+              <select class="form-select" id="calc-activity">
+                <option value="1.4">Neutered Adult (Normal Activity)</option>
+                <option value="1.6" selected>Intact Adult (Moderate Play)</option>
+                <option value="1.8">Active / High Energy Play</option>
+                <option value="2.5">Working / Athletic Agility Dog</option>
+                <option value="1.2">Weight Loss / Senior Pet</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Calculated Results Panel -->
+          <div class="calc-result-panel">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fa-solid fa-chart-pie" style="font-size: 1.25rem; color: #34d399;"></i>
+              <h3 style="font-size: 1.15rem; color: #ffffff;">Veterinary Estimates</h3>
+            </div>
+
+            <div class="calc-stat-box">
+              <span>Daily Caloric Need</span>
+              <span class="calc-stat-num" id="calc-out-calories">1,136 kcal/day</span>
+            </div>
+
+            <div class="calc-stat-box">
+              <span>Hydration Target</span>
+              <span class="calc-stat-num" id="calc-out-water">1,568 ml/day</span>
+            </div>
+
+            <div class="calc-stat-box">
+              <span>Human Age Equiv.</span>
+              <span class="calc-stat-num" id="calc-out-human-age" style="font-size: 1.15rem;">≈ 24 human yrs</span>
+            </div>
+
+            <button class="btn btn-secondary btn-block nav-launch-app-btn" data-view-target="app" style="margin-top: 0.5rem;">
+              <i class="fa-solid fa-paw"></i> Track Routine in PawPulse App
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Deep-Dive Section -->
+    <section class="section-padding" id="features">
+      <div class="site-container">
+        <div class="section-header-center">
+          <span class="section-badge"><i class="fa-solid fa-sparkles"></i> Comprehensive Platform</span>
+          <h2>Everything You Need to Care For Your Pet</h2>
+          <p>Say goodbye to fragmented paper records and missed vaccinations. PawPulse unifies every facet of pet wellness.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrap" style="background: rgba(16, 185, 129, 0.12); color: var(--primary-600);">
+              <i class="fa-solid fa-syringe"></i>
+            </div>
+            <h3 class="feature-title">Smart Vaccine Tracker</h3>
+            <p class="feature-desc">Automated countdowns for core rabies, DHPP, and bordetella boosters with clear visual status tags.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap" style="background: rgba(99, 102, 241, 0.12); color: var(--accent-indigo-500);">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="feature-title">Canvas Weight Curve</h3>
+            <p class="feature-desc">Track weight progression with dynamic bezier curve graphs to prevent obesity and ensure healthy development.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap" style="background: rgba(245, 158, 11, 0.12); color: var(--accent-amber-500);">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <h3 class="feature-title">Vet Visit Booking</h3>
+            <p class="feature-desc">Interactive weekly calendar strip, appointment scheduling, and one-tap emergency calling to your clinic.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap" style="background: rgba(244, 63, 94, 0.12); color: var(--accent-rose-500);">
+              <i class="fa-solid fa-pills"></i>
+            </div>
+            <h3 class="feature-title">Daily Meds & Routines</h3>
+            <p class="feature-desc">Custom checklists for flea/tick chews, supplements, feeding, and walks with one-tap completion logs.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap" style="background: rgba(14, 165, 233, 0.12); color: var(--accent-sky-500);">
+              <i class="fa-solid fa-id-card"></i>
+            </div>
+            <h3 class="feature-title">Digital Pet Passport</h3>
+            <p class="feature-desc">Official international pet ID card with rabies certification, verified microchip, and printable export.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap" style="background: rgba(168, 85, 247, 0.12); color: var(--accent-purple-500);">
+              <i class="fa-solid fa-qrcode"></i>
+            </div>
+            <h3 class="feature-title">Emergency QR Beacon</h3>
+            <p class="feature-desc">Instant QR code on your pet's passport allowing finders or vets to access emergency contacts immediately.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Veterinary Clinic Network Section -->
+    <section class="section-padding" id="vets" style="background: var(--bg-surface-elevated);">
+      <div class="site-container">
+        <div class="section-header-center">
+          <span class="section-badge"><i class="fa-solid fa-hospital-user"></i> Partner Network</span>
+          <h2>Top Veterinary Hospitals & Clinics</h2>
+          <p>Find trusted local animal hospitals, emergency clinics, and wellness centers partnered with PawPulse.</p>
+        </div>
+
+        <!-- Filter Chips -->
+        <div class="filter-chips-row" style="justify-content: center; margin-bottom: var(--space-6);">
+          <button class="chip-btn active" data-vet-filter="all">All Specialties</button>
+          <button class="chip-btn" data-vet-filter="hospital">24/7 Emergency</button>
+          <button class="chip-btn" data-vet-filter="dental">Dental Surgery</button>
+          <button class="chip-btn" data-vet-filter="spa">Grooming & Spa</button>
+        </div>
+
+        <div class="vet-network-grid">
+          <div class="vet-card" data-vet-type="hospital checkup">
+            <div class="flex-between">
+              <span class="badge badge-primary">24/7 Hospital</span>
+              <span class="vet-rating-tag"><i class="fa-solid fa-star"></i> 4.9 (420)</span>
+            </div>
+            <h4 style="font-size: 1.1rem; font-weight: 700;">Metropolis Animal Hospital</h4>
+            <p class="text-secondary" style="font-size: 0.82rem;">Dr. Sarah Jenkins, DVM • Emergency care, comprehensive lab work & surgeries.</p>
+            <p class="text-muted" style="font-size: 0.78rem;"><i class="fa-solid fa-location-dot"></i> 742 Evergreen Terrace, Suite 100</p>
+            <a href="tel:+15553829901" class="btn btn-outline btn-sm" style="margin-top: 0.25rem;">
+              <i class="fa-solid fa-phone"></i> +1 (555) 382-9901
+            </a>
+          </div>
+
+          <div class="vet-card" data-vet-type="dental hospital">
+            <div class="flex-between">
+              <span class="badge badge-indigo">Feline Specialist</span>
+              <span class="vet-rating-tag"><i class="fa-solid fa-star"></i> 4.8 (290)</span>
+            </div>
+            <h4 style="font-size: 1.1rem; font-weight: 700;">Feline Care & Dental Clinic</h4>
+            <p class="text-secondary" style="font-size: 0.82rem;">Dr. Robert Vance, MRCVS • Advanced ultrasonic dental cleaning & cat health.</p>
+            <p class="text-muted" style="font-size: 0.78rem;"><i class="fa-solid fa-location-dot"></i> 120 Whispering Pines Rd</p>
+            <a href="tel:+15554923320" class="btn btn-outline btn-sm" style="margin-top: 0.25rem;">
+              <i class="fa-solid fa-phone"></i> +1 (555) 492-3320
+            </a>
+          </div>
+
+          <div class="vet-card" data-vet-type="spa checkup">
+            <div class="flex-between">
+              <span class="badge badge-amber">Spa & Wellness</span>
+              <span class="vet-rating-tag"><i class="fa-solid fa-star"></i> 5.0 (310)</span>
+            </div>
+            <h4 style="font-size: 1.1rem; font-weight: 700;">Bark & Bubbles Wellness Spa</h4>
+            <p class="text-secondary" style="font-size: 0.82rem;">Maya Reynolds • Full deshedding treatment, claw pedicure & ear therapy.</p>
+            <p class="text-muted" style="font-size: 0.78rem;"><i class="fa-solid fa-location-dot"></i> 88 Ocean Drive</p>
+            <a href="tel:+15552348899" class="btn btn-outline btn-sm" style="margin-top: 0.25rem;">
+              <i class="fa-solid fa-phone"></i> +1 (555) 234-8899
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-padding" id="pricing">
+      <div class="site-container">
+        <div class="section-header-center">
+          <span class="section-badge"><i class="fa-solid fa-tag"></i> Simple Pricing</span>
+          <h2>Affordable Plans for Every Pet Family</h2>
+          <p>Start free forever or unlock multi-pet synchronization, full weight curves, and digital passport exports.</p>
+        </div>
+
+        <!-- Monthly / Annual Toggle -->
+        <div class="pricing-switch-wrap">
+          <div class="pricing-switch-btn">
+            <span class="pricing-toggle-opt" id="pricing-opt-monthly">Monthly Billing</span>
+            <span class="pricing-toggle-opt active" id="pricing-opt-annual">Annual (Save 20%)</span>
+          </div>
+          <span class="discount-pill">2 MONTHS FREE</span>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Starter Plan -->
+          <div class="pricing-card">
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 800;">Paw Starter</h3>
+              <p class="text-secondary" style="font-size: 0.82rem;">Essential care for single pet parents</p>
+            </div>
+
+            <div class="pricing-price-row">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-amount">0</span>
+              <span class="pricing-period">/ forever</span>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> 1 Pet Profile</li>
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Basic Vaccination Tracker</li>
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Vet Appointment Reminders</li>
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Local Data Storage</li>
+            </ul>
+
+            <button class="btn btn-secondary btn-block nav-launch-app-btn" data-view-target="app">
+              Get Started Free
+            </button>
+          </div>
+
+          <!-- Plus Plan (Featured) -->
+          <div class="pricing-card featured">
+            <div class="pricing-popular-badge">Most Popular</div>
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-500);">PawPulse Plus</h3>
+              <p class="text-secondary" style="font-size: 0.82rem;">Complete health tracking for multi-pet households</p>
+            </div>
+
+            <div class="pricing-price-row">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-amount" id="price-plus-amt">3.99</span>
+              <span class="pricing-period">/ month</span>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Up to 3 Pet Profiles</li>
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> HTML5 Canvas Weight Trend Curves</li>
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Official Digital Pet Passport & QR Code</li>
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> PDF Print / Export Certificate</li>
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Automated Booster Alerts</li>
+            </ul>
+
+            <button class="btn btn-primary btn-block nav-launch-app-btn" data-view-target="app">
+              Start Free Trial
+            </button>
+          </div>
+
+          <!-- Pack Unlimited -->
+          <div class="pricing-card">
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 800;">Pack Unlimited</h3>
+              <p class="text-secondary" style="font-size: 0.82rem;">For breeders, shelters & large pet families</p>
+            </div>
+
+            <div class="pricing-price-row">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-amount" id="price-unlimited-amt">7.99</span>
+              <span class="pricing-period">/ month</span>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Unlimited Pet Profiles</li>
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Direct Vet Telehealth Chat</li>
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Priority 24/7 Emergency Support</li>
+              <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Multi-Device Cloud Sync</li>
+            </ul>
+
+            <button class="btn btn-secondary btn-block nav-launch-app-btn" data-view-target="app">
+              Choose Unlimited
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section-padding" id="reviews" style="background: var(--bg-surface-elevated);">
+      <div class="site-container">
+        <div class="section-header-center">
+          <span class="section-badge"><i class="fa-solid fa-comments"></i> Real Stories</span>
+          <h2>Loved by 50,000+ Pet Parents</h2>
+          <p>Read how PawPulse gives peace of mind to dog and cat lovers across the country.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="hero-trust-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-quote">
+              "When traveling to Canada, having Luna's verified rabies certificate and digital passport right on my phone saved us over 2 hours at customs. Absolutely essential!"
+            </p>
+            <div class="reviewer-meta">
+              <img src="/images/pets/luna.jpg" alt="Luna & Owner" class="reviewer-avatar" />
+              <div>
+                <strong style="font-size: 0.9rem; display: block;">Jessica Miller</strong>
+                <span class="text-secondary" style="font-size: 0.78rem;">Parent to Luna (Golden Retriever)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="hero-trust-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-quote">
+              "The weight tracking curve helped us identify Milo's early digestive issues before they became severe. The medication reminders keep our routine completely stress-free."
+            </p>
+            <div class="reviewer-meta">
+              <img src="/images/pets/milo.jpg" alt="Milo & Owner" class="reviewer-avatar" />
+              <div>
+                <strong style="font-size: 0.9rem; display: block;">David Chen</strong>
+                <span class="text-secondary" style="font-size: 0.78rem;">Parent to Milo (British Shorthair)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="hero-trust-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-quote">
+              "Cooper has severe wheat allergies. Keeping his dietary restrictions, vet phone numbers, and checkup schedules in one clean app gives my whole family total clarity."
+            </p>
+            <div class="reviewer-meta">
+              <img src="/images/pets/cooper.jpg" alt="Cooper & Owner" class="reviewer-avatar" />
+              <div>
+                <strong style="font-size: 0.9rem; display: block;">Samantha Ross</strong>
+                <span class="text-secondary" style="font-size: 0.78rem;">Parent to Cooper (French Bulldog)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding" id="faq">
+      <div class="site-container">
+        <div class="section-header-center">
+          <span class="section-badge"><i class="fa-solid fa-circle-question"></i> Got Questions?</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Find answers to common questions about PawPulse features, passports, and records.</p>
+        </div>
+
+        <div class="faq-accordion-wrap">
+          <div class="faq-item open">
+            <div class="faq-question">
+              <span>Is my pet's medical data stored securely?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Yes! All pet profiles, weight curves, and medical entries are stored with local persistence in your browser. With our Plus and Unlimited tiers, data is securely encrypted in transit and at rest.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I export or print my pet's digital passport?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Absolutely. In the Passport tab, simply click "Export / Print" to generate a clean, official medical card with rabies certification, microchip ID, and emergency veterinary QR code ready for PDF export or paper printing.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I manage multiple dogs and cats in the same app?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Yes! PawPulse supports multi-pet management. You can switch between active pet profiles in a single click from the header or pets tab, with custom weight curves and vaccine schedules for each pet.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How does the vaccine countdown reminder work?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              PawPulse automatically calculates the exact days remaining until your pet's next booster dose. Items due within 30 days display amber warning badges, while overdue items trigger notifications.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Download Banner Section (Google Play & App Store) -->
+    <section class="section-padding" style="padding-top: 0;">
+      <div class="site-container">
+        <div class="app-download-banner">
+          <div>
+            <span class="section-badge" style="background: rgba(255, 255, 255, 0.2); color: #ffffff; border-color: rgba(255, 255, 255, 0.3);">
+              <i class="fa-solid fa-mobile-screen-button"></i> Available on iOS & Android
+            </span>
+            <h2 style="font-size: 2.1rem; font-weight: 800; line-height: 1.2; margin-bottom: var(--space-3); color: #ffffff;">
+              Take PawPulse Anywhere You & Your Pet Go
+            </h2>
+            <p style="font-size: 1rem; opacity: 0.9; margin-bottom: var(--space-6); max-width: 480px; line-height: 1.5;">
+              Download the official mobile app from Google Play or Apple App Store for real-time vaccine alerts, instant passport QR access, and routine notifications.
+            </p>
+            <div class="store-badges-row">
+              <a href="#" class="store-badge-btn open-store-modal-btn" data-store="google-play">
+                <i class="fa-brands fa-google-play store-badge-icon"></i>
+                <div class="store-badge-texts">
+                  <span class="store-badge-sub">GET IT ON</span>
+                  <span class="store-badge-title">Google Play</span>
+                </div>
+              </a>
+              <a href="#" class="store-badge-btn open-store-modal-btn" data-store="app-store">
+                <i class="fa-brands fa-apple store-badge-icon"></i>
+                <div class="store-badge-texts">
+                  <span class="store-badge-sub">Download on the</span>
+                  <span class="store-badge-title">App Store</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="banner-qr-box">
+            <div class="banner-qr-svg">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5" y="5" width="26" height="26" rx="4" fill="#0f172a"/>
+                <rect x="10" y="10" width="16" height="16" fill="#ffffff"/>
+                <rect x="13" y="13" width="10" height="10" rx="2" fill="#10b981"/>
+                <rect x="69" y="5" width="26" height="26" rx="4" fill="#0f172a"/>
+                <rect x="74" y="10" width="16" height="16" fill="#ffffff"/>
+                <rect x="77" y="13" width="10" height="10" rx="2" fill="#10b981"/>
+                <rect x="5" y="69" width="26" height="26" rx="4" fill="#0f172a"/>
+                <rect x="10" y="74" width="16" height="16" fill="#ffffff"/>
+                <rect x="13" y="77" width="10" height="10" rx="2" fill="#10b981"/>
+                <rect x="36" y="8" width="8" height="6" fill="#0f172a"/>
+                <rect x="48" y="8" width="14" height="6" fill="#0f172a"/>
+                <rect x="36" y="38" width="8" height="8" rx="2" fill="#10b981"/>
+                <rect x="48" y="44" width="6" height="16" fill="#0f172a"/>
+                <rect x="68" y="70" width="24" height="6" fill="#0f172a"/>
+                <rect x="84" y="80" width="8" height="12" rx="2" fill="#10b981"/>
+              </svg>
+            </div>
+            <div>
+              <strong style="font-size: 0.95rem; display: block; color: #ffffff;">Scan to Install App</strong>
+              <span style="font-size: 0.8rem; opacity: 0.8;">Instant WebAPK & PWA download on any smartphone.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Website Footer -->
+    <footer class="site-footer">
+      <div class="site-container">
+        <div class="footer-grid">
+          <div>
+            <a href="#hero" class="site-logo">
+              <div class="site-logo-icon"><i class="fa-solid fa-paw"></i></div>
+              <span>PawPulse</span>
+            </a>
+            <p class="footer-brand-p">
+              The modern pet care operating system empowering parents and veterinarians to deliver happier, healthier lives for companion animals.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Product</h4>
+            <ul class="footer-links">
+              <li><a href="#features">Smart Vaccines</a></li>
+              <li><a href="#calculator">Health Calculator</a></li>
+              <li><a href="#vets">Vet Directory</a></li>
+              <li><a href="#pricing">Pricing Plans</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Resources</h4>
+            <ul class="footer-links">
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#reviews">Testimonials</a></li>
+              <li><a href="/app.html">Launch Web App</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Legal & Security</h4>
+            <ul class="footer-links">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Security Overview</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <span>&copy; 2026 PawPulse Technologies Inc. All rights reserved.</span>
+          <div style="display: flex; gap: 1rem;">
+            <a href="#" style="color: var(--text-muted);"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" style="color: var(--text-muted);"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" style="color: var(--text-muted);"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- =========================================================
+       2. FULL INTERACTIVE WEB APP ROOT CONTAINER (Dual-Mode)
+       ========================================================= -->
+  <div id="app-root" class="app-root hidden">
+    <!-- Back to Website Pill -->
+    <button class="dual-btn" data-view-target="website" style="position: absolute; top: 18px; left: 18px; z-index: 100; background: var(--bg-surface); border: 1px solid var(--border-card); padding: 0.5rem 0.9rem; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 0.4rem;">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Back to Website</span>
+    </button>
+
+    <!-- Main Mobile Viewport -->
+    <div id="mobile-viewport" class="mobile-viewport">
+      <!-- Dynamic Header -->
+      <header id="app-header" class="app-header"></header>
+
+      <!-- Main Scrollable Screen Content -->
+      <main id="app-main" class="app-main" tabindex="-1"></main>
+
+      <!-- Bottom Navigation Bar -->
+      <nav id="bottom-nav" class="bottom-nav"></nav>
+    </div>
+
+    <!-- Slide-up Bottom Sheet Modal -->
+    <div id="bottom-sheet-container" class="bottom-sheet-overlay hidden">
+      <div id="bottom-sheet" class="bottom-sheet">
+        <div class="sheet-handle-bar">
+          <div class="sheet-handle"></div>
+        </div>
+        <div id="bottom-sheet-content" class="sheet-content"></div>
+      </div>
+    </div>
+
+    <!-- General Animated Modal Container -->
+    <div id="modal-container" class="modal-overlay hidden">
+      <div id="modal-content" class="modal-card"></div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+  </div>
+
+  <!-- Dual View Switcher Floating Pill -->
+  <div class="dual-view-bar">
+    <button class="dual-btn active" data-view-target="website">
+      <i class="fa-solid fa-globe"></i> <span>Website</span>
+    </button>
+    <button class="dual-btn" data-view-target="app">
+      <i class="fa-solid fa-mobile-screen"></i> <span>Launch App</span>
+    </button>
+  </div>
+
+  <!-- Main JavaScript Bootstraps -->
+  <script type="module">
+    import './src/main.js';
+    import { WebsiteController } from './src/js/website.js';
+    import { store } from './src/services/store.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      window.websiteController = new WebsiteController();
+
+      const siteThemeBtn = document.getElementById('site-theme-btn');
+      if (siteThemeBtn) {
+        siteThemeBtn.onclick = () => {
+          const next = store.toggleTheme();
+          siteThemeBtn.innerHTML = next === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+        };
+      }
+    });
+  </script>
+</body>
+</html>
