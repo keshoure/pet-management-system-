@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="pawGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#e11d48" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="28" fill="#0f172a"/>
+  <!-- Main pad -->
+  <path d="M50 50 C40 50, 32 60, 35 72 C37 80, 44 84, 50 84 C56 84, 63 80, 65 72 C68 60, 60 50, 50 50 Z" fill="url(#pawGrad)"/>
+  <!-- Toe pads -->
+  <circle cx="28" cy="46" r="10" fill="url(#pawGrad)"/>
+  <circle cx="42" cy="32" r="10" fill="url(#pawGrad)"/>
+  <circle cx="58" cy="32" r="10" fill="url(#pawGrad)"/>
+  <circle cx="72" cy="46" r="10" fill="url(#pawGrad)"/>
+  <!-- Small Heart in center pad -->
+  <path d="M50 68 C48 64, 43 64, 43 67 C43 70, 50 75, 50 75 C50 75, 57 70, 57 67 C57 64, 52 64, 50 68 Z" fill="#ffffff" opacity="0.9"/>
+</svg>
